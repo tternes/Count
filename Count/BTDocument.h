@@ -9,5 +9,11 @@
 #import <Cocoa/Cocoa.h>
 
 @interface BTDocument : NSDocument
+{
+    NSTimer *tickTimer;
+    NSUInteger count;
+}
 
+@property (assign) IBOutlet NSTextField *counterField;
+@property (assign) IBOutlet NSBox *customBox;
 @end
