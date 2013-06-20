@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		243619A917734CF000B43CE7 /* BTCountAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 243619A817734CF000B43CE7 /* BTCountAppDelegate.m */; };
 		248AF65E1770CF380085650A /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 248AF65D1770CF380085650A /* Cocoa.framework */; };
 		248AF6681770CF380085650A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 248AF6661770CF380085650A /* InfoPlist.strings */; };
 		248AF66A1770CF380085650A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 248AF6691770CF380085650A /* main.m */; };
@@ -17,6 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		243619A717734CF000B43CE7 /* BTCountAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTCountAppDelegate.h; sourceTree = "<group>"; };
+		243619A817734CF000B43CE7 /* BTCountAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTCountAppDelegate.m; sourceTree = "<group>"; };
 		248AF65A1770CF380085650A /* Count.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Count.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		248AF65D1770CF380085650A /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		248AF6601770CF380085650A /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -89,6 +92,8 @@
 				248AF6721770CF380085650A /* BTDocument.xib */,
 				248AF6751770CF380085650A /* MainMenu.xib */,
 				248AF6641770CF380085650A /* Supporting Files */,
+				243619A717734CF000B43CE7 /* BTCountAppDelegate.h */,
+				243619A817734CF000B43CE7 /* BTCountAppDelegate.m */,
 			);
 			path = Count;
 			sourceTree = "<group>";
@@ -173,6 +178,7 @@
 			files = (
 				248AF66A1770CF380085650A /* main.m in Sources */,
 				248AF6711770CF380085650A /* BTDocument.m in Sources */,
+				243619A917734CF000B43CE7 /* BTCountAppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -314,6 +320,7 @@
 				248AF67C1770CF380085650A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
