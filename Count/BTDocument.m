@@ -7,16 +7,28 @@
 //
 
 #import "BTDocument.h"
-
+//#define USE_LAYERS_FOR_COLORS 1
 @implementation BTDocument
 
 - (void)timerTick:(id)sender
 {
     [self.counterField setStringValue:[NSString stringWithFormat:@"%li", (unsigned long)++count]];
+    
+#ifdef USE_LAYERS_FOR_COLORS
+    
+    // 80 windows on my rMBP = 20-30% CPU with implicit animations (see below)
+    CGColorRef color = CGColorCreateGenericRGB((float)rand()/RAND_MAX, (float)rand()/RAND_MAX, (float)rand()/RAND_MAX, 1.0);
+    self.customBox.layer.backgroundColor = color;
+    CGColorRelease(color);
+#else
+    
+    // 80 windows on my rMBP = 3% CPU
     [self.customBox setFillColor:[NSColor colorWithDeviceRed:(float)rand()/RAND_MAX
                                                        green:(float)rand()/RAND_MAX
                                                         blue:(float)rand()/RAND_MAX
                                                        alpha:1.0]];
+
+#endif
 }
 
 - (void)dealloc
@@ -37,7 +49,16 @@
 {
     [super windowControllerDidLoadNib:aController];
 
-    srand((unsigned int)time(NULL));
+#ifdef USE_LAYERS_FOR_COLORS
+    [self.customBox setWantsLayer:YES];
+    self.customBox.layer = [CALayer layer];
+    self.customBox.layer.opaque = YES;
+    
+    // Implicit animations runs about 20-30% CPU on my rMBP with 80 windows
+    // Disabling backgroundColor animation is 10-11%
+    self.customBox.layer.actions = @{ @"backgroundColor" : [NSNull null] };
+#endif
+
     [self.counterField setStringValue:@"0"];
     
     tickTimer = [[NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(timerTick:) userInfo:nil repeats:YES] retain];
