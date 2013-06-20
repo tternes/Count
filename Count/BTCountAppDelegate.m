@@ -10,6 +10,11 @@
 
 @implementation BTCountAppDelegate
 
+- (void)applicationDidFinishLaunching:(NSNotification *)notification
+{
+    srand((unsigned int)time(NULL));
+}
+
 - (IBAction)tileOpenWindows:(id)sender
 {
     // Tile across primary display
