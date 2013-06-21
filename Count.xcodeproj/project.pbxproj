@@ -54,7 +54,6 @@
 		248AF6511770CF380085650A = {
 			isa = PBXGroup;
 			children = (
-				243619AA177352B900B43CE7 /* Quartz.framework */,
 				248AF6631770CF380085650A /* Count */,
 				248AF65C1770CF380085650A /* Frameworks */,
 				248AF65B1770CF380085650A /* Products */,
@@ -72,6 +71,7 @@
 		248AF65C1770CF380085650A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				243619AA177352B900B43CE7 /* Quartz.framework */,
 				248AF65D1770CF380085650A /* Cocoa.framework */,
 				248AF65F1770CF380085650A /* Other Frameworks */,
 			);
@@ -284,10 +284,12 @@
 		248AF67B1770CF380085650A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Count/Count-Prefix.pch";
 				INFOPLIST_FILE = "Count/Count-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -296,10 +298,12 @@
 		248AF67C1770CF380085650A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Count/Count-Prefix.pch";
 				INFOPLIST_FILE = "Count/Count-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

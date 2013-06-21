@@ -9,10 +9,12 @@
 #import "BTDocument.h"
 //#define USE_LAYERS_FOR_COLORS 1
 @implementation BTDocument
+@synthesize customBox=_customBox;
+@synthesize counterField=_counterField;;
 
 - (void)timerTick:(id)sender
 {
-    [self.counterField setStringValue:[NSString stringWithFormat:@"%li", (unsigned long)++count]];
+    [self.counterField setStringValue:[NSString stringWithFormat:@"%li", (unsigned long)++_count]];
     
 #ifdef USE_LAYERS_FOR_COLORS
     
@@ -33,8 +35,8 @@
 
 - (void)dealloc
 {
-    [tickTimer invalidate];
-    [tickTimer release];
+    [_tickTimer invalidate];
+    [_tickTimer release];
     [super dealloc];
 }
 
@@ -61,14 +63,14 @@
 
     [self.counterField setStringValue:@"0"];
     
-    tickTimer = [[NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(timerTick:) userInfo:nil repeats:YES] retain];
+    _tickTimer = [[NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(timerTick:) userInfo:nil repeats:YES] retain];
 }
 
 - (void)canCloseDocumentWithDelegate:(id)delegate shouldCloseSelector:(SEL)shouldCloseSelector contextInfo:(void *)contextInfo
 {
-    [tickTimer invalidate];
-    [tickTimer release];
-    tickTimer = nil;
+    [_tickTimer invalidate];
+    [_tickTimer release];
+    _tickTimer = nil;
     
     [super canCloseDocumentWithDelegate:delegate shouldCloseSelector:shouldCloseSelector contextInfo:contextInfo];
 }

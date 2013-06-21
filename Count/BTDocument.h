@@ -10,8 +10,11 @@
 
 @interface BTDocument : NSDocument
 {
-    NSTimer *tickTimer;
-    NSUInteger count;
+    NSTimer *_tickTimer;
+    NSUInteger _count;
+    
+    NSTextField *_counterField;
+    NSBox *_customBox;
 }
 
 @property (assign) IBOutlet NSTextField *counterField;
