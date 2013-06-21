@@ -16,12 +16,14 @@
 		248AF6711770CF380085650A /* BTDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = 248AF6701770CF380085650A /* BTDocument.m */; };
 		248AF6741770CF380085650A /* BTDocument.xib in Resources */ = {isa = PBXBuildFile; fileRef = 248AF6721770CF380085650A /* BTDocument.xib */; };
 		248AF6771770CF380085650A /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 248AF6751770CF380085650A /* MainMenu.xib */; };
+		249EF1821774E2CD00F2148E /* CountIcon.iconset in Resources */ = {isa = PBXBuildFile; fileRef = 2465B6A41774D881001DC40C /* CountIcon.iconset */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		243619A717734CF000B43CE7 /* BTCountAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTCountAppDelegate.h; sourceTree = "<group>"; };
 		243619A817734CF000B43CE7 /* BTCountAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTCountAppDelegate.m; sourceTree = "<group>"; };
 		243619AA177352B900B43CE7 /* Quartz.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quartz.framework; path = System/Library/Frameworks/Quartz.framework; sourceTree = SDKROOT; };
+		2465B6A41774D881001DC40C /* CountIcon.iconset */ = {isa = PBXFileReference; lastKnownFileType = folder.iconset; path = CountIcon.iconset; sourceTree = SOURCE_ROOT; };
 		248AF65A1770CF380085650A /* Count.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Count.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		248AF65D1770CF380085650A /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		248AF6601770CF380085650A /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -105,6 +107,7 @@
 		248AF6641770CF380085650A /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				2465B6A41774D881001DC40C /* CountIcon.iconset */,
 				248AF6651770CF380085650A /* Count-Info.plist */,
 				248AF6661770CF380085650A /* InfoPlist.strings */,
 				248AF6691770CF380085650A /* main.m */,
@@ -170,6 +173,7 @@
 				248AF66E1770CF380085650A /* Credits.rtf in Resources */,
 				248AF6741770CF380085650A /* BTDocument.xib in Resources */,
 				248AF6771770CF380085650A /* MainMenu.xib in Resources */,
+				249EF1821774E2CD00F2148E /* CountIcon.iconset in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
